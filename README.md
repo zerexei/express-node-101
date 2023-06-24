@@ -1,11 +1,11 @@
-## Setup express/node/typescript
+## Setup backend
 
-1. npm init
-2. npm install express dotnet nodemon
-3. npm install -D typescript ts-node @types/express @types/node
-4. npx tsc --init
-5. nodemon ./index.ts
+1. cd backend && npm install
+2. npm run dev
 
-## Setup vite/react/typescript
+## Setup frontend
+
+1. cd frontend && npm install
+2. npm run dev
 
 - https://vitejs.dev/guide/
