@@ -1,9 +1,7 @@
-import { useState } from 'react';
-import './App.css';
+import '@/App.css';
+import FileUpload from '@components/FileUpload';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div>
@@ -16,13 +14,7 @@ function App() {
             >
               Avatar
             </label>
-            <input
-              type="text"
-              name="avatar"
-              placeholder="avatar..."
-              id="avatar"
-              className="w-full p-2 border rounded"
-            />
+            <FileUpload />
           </div>
         </form>
       </div>
