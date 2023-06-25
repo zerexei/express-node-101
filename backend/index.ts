@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 
 import users from './routes/users'
+import books from './routes/books'
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ app.get('/', (req: Request, res: Response) => {
 })
 
 app.use('/users', users);
+app.use('/books', books);
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
