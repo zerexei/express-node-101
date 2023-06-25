@@ -21,7 +21,7 @@ const BookList = () => {
 
   async function fetchBooks() {
     // const res = await fetch('/books');
-    const res = await fetch('https://jsonplaceholder.typicode.com/todos');
+    const res = await fetch('http://127.0.0.1:3002/books');
     const books: BookType[] = await res.json();
     setBooks(books);
   }
