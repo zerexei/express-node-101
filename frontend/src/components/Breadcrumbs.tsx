@@ -14,9 +14,9 @@ const Breadcrumbs = () => {
 
   return (
     <div>
-      <div className="inline-flex items-center px-4 py-2 text-sm border border-gray-400 rounded-md">
+      <div className="inline-flex items-center px-4 py-2 text-sm border-2 border-gray-300 rounded-md">
         <a href="#">
-          <TestIcon css="w-6 h-6 cursor-pointer hover:text-primary" />
+          <TestIcon css="w-6 h-6 text-gray-500 cursor-pointer hover:text-primary" />
         </a>
         {items.map((item: ItemType) => (
           <div key={item.id} className="flex">
