@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { TestIconProps } from '@components/icons/TestIcon';
+import { AppContext } from '@/context/AppContext';
 
 // type DynamicComponent<T> = React.ComponentType<T>;
 
@@ -17,6 +18,10 @@ export interface ItemProps {
 }
 
 const Item = ({ title, url, icon: IconComponent }: ItemProps) => {
+  const value = useContext(AppContext);
+  console.log(value.location);
+  
+
   return (
     <NavLink
       to={url}

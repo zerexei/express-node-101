@@ -1,14 +1,16 @@
+// import  from 'react-router-dom'
 import Items from '@components/sidebar/Items';
 import CompanyLogo from '@components/sidebar/CompanyLogo';
 import TestIcon from '@components/icons/TestIcon';
 
 const main_navigation = [
   { id: 1, title: 'Dashboard', icon: TestIcon, url: '/' },
-  { id: 2, title: 'Team', icon: TestIcon, url: '/team' },
-  { id: 3, title: 'Projects', icon: TestIcon, url: '/projects' },
-  { id: 4, title: 'Calendar', icon: TestIcon, url: '#' },
+  { id: 2, title: 'Books', icon: TestIcon, url: '/books' },
+  { id: 3, title: 'Team', icon: TestIcon, url: '/team' },
+  { id: 4, title: 'Projects', icon: TestIcon, url: '/projects' },
+  { id: 5, title: 'Calendar', icon: TestIcon, url: '#' },
   { id: 6, title: 'Documents', icon: TestIcon, url: '#' },
-  { id: 5, title: 'Reports', icon: TestIcon, url: '#' },
+  { id: 7, title: 'Reports', icon: TestIcon, url: '#' },
 ];
 
 const secondary_navigation = [
