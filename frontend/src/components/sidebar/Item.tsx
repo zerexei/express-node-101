@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { TestIconProps } from '@components/icons/TestIcon';
-import { AppContext } from '@/context/AppContext';
+// import { AppContext } from '@/context/AppContext';
 
 // type DynamicComponent<T> = React.ComponentType<T>;
 
@@ -18,17 +18,24 @@ export interface ItemProps {
 }
 
 const Item = ({ title, url, icon: IconComponent }: ItemProps) => {
-  const value = useContext(AppContext);
-  console.log(value.location);
-  
+  // const value = useContext(AppContext);
+  const location = useLocation();
+  const isActive = url == location.pathname;
+  const className = isActive ? ' text-primary' : ' text-gray-400';
 
   return (
     <NavLink
       to={url}
-      className="flex items-center gap-2 p-2 rounded-md cursor-pointer group/sidebar-item hover:bg-gray-200"
+      className={`flex items-center gap-2 p-2 rounded-md cursor-pointer group/sidebar-item hover:bg-gray-200 ${
+        isActive ? 'bg-gray-200' : ''
+      }`}
     >
-      <IconComponent css="w-6 h-6 text-gray-400 group-hover/sidebar-item:text-primary" />
-      <h3 className="font-semibold group-hover/sidebar-item:text-primary">
+      <IconComponent
+        css={`w-6 h-6 group-hover/sidebar-item:text-primary ${className}`}
+      />
+      <h3
+        className={`font-semibold group-hover/sidebar-item:text-primary ${className}`}
+      >
         {title}
       </h3>
     </NavLink>
