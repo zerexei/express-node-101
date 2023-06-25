@@ -18,6 +18,7 @@ router.post('/user-name', (req: Request, res: Response) => {
 });
 
 router.post("/:id/avatar", upload.single('avatar'), (req: Request, res: Response) => {
+    
     if (!req.file) {
         return handleError(true, res, "image is missing.");
     }
