@@ -9,7 +9,7 @@ const Items = ({ items }: ItemsProps) => {
   return (
     <div className="flex flex-col gap-1">
       {items.map((item) => (
-        <Item key={item.id} id={item.id} icon={item.icon} title={item.title} />
+        <Item key={item.id} {...item} />
       ))}
     </div>
   );
