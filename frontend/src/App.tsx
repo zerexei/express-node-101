@@ -1,10 +1,17 @@
 import '@/App.css';
-import FileUpload from './components/FileUpload';
+import Sidebar from './components/sidebar';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl text-red-400 font-bold underline">Hello world!</h1>
+    <div className="min-h-screen antialiased text-gray-700 bg-gray-100">
+      <div className="flex h-full">
+        <div className="w-[20rem] h-screen p-4">
+          <Sidebar />
+        </div>
+        <div className="flex-1">
+          <div className="relative w-full py-4 mx-auto transition duration-200 bg-white max-w-screen-2xl md:bg-transparent lg:py-6"></div>
+        </div>
+      </div>
     </div>
   );
 }
