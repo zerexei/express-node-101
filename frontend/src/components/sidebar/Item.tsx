@@ -9,6 +9,7 @@ import { TestIconProps } from '@components/icons/TestIcon';
 // };
 
 export interface ItemProps {
+  id: number;
   icon: React.ComponentType<TestIconProps>;
   title: string;
 }
